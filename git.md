@@ -2,7 +2,7 @@ The first tutorial on using git (from the web page):
 
 	- https://guides.github.com/activities/hello-world/ (Creating a project (repository), creatign a branch, modifying a file, committing it, pull request, and merging:)
 	
-**Tutorial:**
+**More Tutorial:**
 
 	- http://rogerdudler.github.io/git-guide/
 
