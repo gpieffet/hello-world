@@ -50,4 +50,5 @@ $ git push origin master	# push the changes to the server origin and the branch 
 
 ### Files tha t you don't want to appear even as untracked
 => Put them in .gitignore
+and more
 
