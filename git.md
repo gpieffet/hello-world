@@ -1,11 +1,15 @@
 The first tutorial on using git (from the web page):
 
-Creating a project (repository), creatign a branch, modifying a file, committing it, pull request, and merging:
-	- https://guides.github.com/activities/hello-world/
+	- https://guides.github.com/activities/hello-world/ (Creating a project (repository), creatign a branch, modifying a file, committing it, pull request, and merging:)
 	
-Tutorial:
+**Tutorial:**
+
+	- http://rogerdudler.github.io/git-guide/
+
 	- https://git-scm.com/book/id/v2/Getting-Started-First-Time-Git-Setup
+
 	- https://github.com/GarageGames/Torque2D/wiki/Cloning-the-repo-and-working-with-Git
+
 	
 
 ## Git Commands:
@@ -48,7 +52,7 @@ $ git pull			# fetches data from the server and tries to merge it
 $ git push origin master	# push the changes to the server origin and the branch master   
 
 
-### Files tha t you don't want to appear even as untracked
+### Files that you don't want to appear (in the status) even as untracked
 => Put them in .gitignore
-and more
+and more with sublime text, and more and more
 
