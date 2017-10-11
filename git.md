@@ -76,5 +76,5 @@ $ git push [origin][master]	# push the changes to the server origin and the bran
 => Put them in .gitignore
 and more with sublime text, and more and more
 from a new branch
-merge on the branch
+merge on the branch and now on the master from the remote branch.
 
