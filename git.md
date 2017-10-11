@@ -23,8 +23,10 @@ $ git config --global user.name "name here"
 $ git config --global user.email "email address here"
 $ git config --global core.editor "Fav. editor here if different from default"
 
-### Cloning
+### Cloning or starting a local repository
 $ git clone https://github.com/gpieffet/hello-world.git git-clone-local-dir
+$ git init			# initialize a git repository
+$ git remote add origin <server@>	# connect to a remote repos 
 
 ### Getting information
 $ git status
@@ -55,4 +57,5 @@ $ git push origin master	# push the changes to the server origin and the branch 
 ### Files that you don't want to appear (in the status) even as untracked
 => Put them in .gitignore
 and more with sublime text, and more and more
+from a new branch
 
