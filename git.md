@@ -1,10 +1,10 @@
-The first tutorial on using git (from the web page):
-
-	- https://guides.github.com/activities/hello-world/ (Creating a project (repository), creatign a branch, modifying a file, committing it, pull request, and merging:)
-	
-**More Tutorial:**
+**Tutorials:**
 
 	- http://rogerdudler.github.io/git-guide/
+
+	- https://mislav.net/2010/07/git-tips/
+	
+	- https://guides.github.com/activities/hello-world/ (Creating a project (repository), creatign a branch, modifying a file, committing it, pull request, and merging:)
 
 	- https://git-scm.com/book/id/v2/Getting-Started-First-Time-Git-Setup
 
@@ -43,7 +43,8 @@ $ git remote show origin			# informations about a particular remote repos
 
 
 ### Managing branches
-$ git checkout -b branch1	# create a new branch and switch to it (a branch is just a pointer to a commit)
+$ git branch branch1		# create a new branch (a branch is just a pointer to a commit)
+$ git checkout -b branch1	# create a new branch and switch to it
 $ git checkout master		# go back to the master
 $ git checkout branch1	# go back to branch1
 $ git branch -d branch1	# delete the branch
@@ -69,7 +70,11 @@ $ git checkout -- file1	# to discard changes in file 1 and get it back as it was
 $ git fetch [origin]		# get any new file that was done since it was cloned (or last fetched) but doesn't merge it
 $ git merge				# merge the files that were fetched
 $ git pull				# fetches data from the server and tries to merge it
-$ git push [origin][master]	# push the changes to the server origin and the branch master   
+$ git push -u origin master# push the changes to the server origin and the branch master
+						# -u sets tracking between local and remote branch (master)
+$ git push				# push the changes to the remote repo (no need for args if upstream tracking is set)
+
+
 
 
 ### Files that you don't want to appear (in the status) even as untracked
