@@ -47,25 +47,29 @@ $ git checkout -b branch1	# create a new branch and switch to it (a branch is ju
 $ git checkout master		# go back to the master
 $ git checkout branch1	# go back to branch1
 $ git branch -d branch1	# delete the branch
-$ git push origin branch1	# to make a branch available to others (so that they can make a pull)
 $ git merge <branch>	# merge <branch> to the active branch
-$ git push origin --delete branch1	# delete remote branch1
+$ git push origin branch1	# to make a branch available to others (so that they can make a pull)
+$ git push origin [local branch]:[remote branch]	# same but under a different name on the remote repo
+$ git push origin --delete branch1				# delete remote branch1 (-d also available starting with git 2.8)
+$ git merge origin/branch1					# merge remote branch1 to the active branch (after a fetch?) 
+$ git checkout -b branch1 origin/branch1		# get a local branch1 off the remote branch1
 
 
 ### Managing files
-$ git add git.md		#  to start tracking a file and stage it to be commited (if already tracked)
-					# think of it as add content to be commited 
-$ git commit			# record the snapshot set up in the staging area
+$ git add git.md			#  to start tracking a file and stage it to be commited (if already tracked)
+						# think of it as add content to be commited 
+$ git commit				# record the snapshot set up in the staging area
 or $ git commit -m "Write the commit message"
-$ git commit -a		# record all the tracked files without having to stage them before
-$ git rm filename		# remove from staging area and delete from hard disk (durign the next commit)
-$ git rm --cached file1# remove from staging and tracking (but keep it on hard disk) 
-$ git mv file1 file2	# rename file1 to file2
-$ git reset HEAD		# to unstage a file (but keep it tracked)
-$ git checkout -- file1# to discard changes in file 1 and get it back as it was the first time around
-$ git fetch origin		# get any new file that was done since it was cloned (or last fetched) but doesn't merge it
-$ git pull			# fetches data from the server and tries to merge it
-$ git push origin master	# push the changes to the server origin and the branch master   
+$ git commit -a			# record all the tracked files without having to stage them before
+$ git rm filename			# remove from staging area and delete from hard disk (durign the next commit)
+$ git rm --cached file1	# remove from staging and tracking (but keep it on hard disk) 
+$ git mv file1 file2		# rename file1 to file2
+$ git reset HEAD			# to unstage a file (but keep it tracked)
+$ git checkout -- file1	# to discard changes in file 1 and get it back as it was the first time around
+$ git fetch [origin]		# get any new file that was done since it was cloned (or last fetched) but doesn't merge it
+$ git merge				# merge the files that were fetched
+$ git pull				# fetches data from the server and tries to merge it
+$ git push [origin][master]	# push the changes to the server origin and the branch master   
 
 
 ### Files that you don't want to appear (in the status) even as untracked
