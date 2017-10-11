@@ -27,7 +27,7 @@ $ git config --global core.editor "Fav. editor here if different from default"
 ### Cloning or starting a local repository
 $ git clone https://github.com/gpieffet/hello-world.git git-clone-local-dir
 $ git init			# initialize a git repository
-$ git remote add origin <server@>	# connect to a remote repos 
+$ git remote add origin <server@>	# connect to a remote repos (with nick origin)
 
 
 ### Getting information
@@ -38,7 +38,7 @@ $ git log
 $ git branch			# show existing branches
 $ git remote [-v]		# list which remote servers are configured
 => a cloned repo. appears as "origin"
-$ git remote add shortname [url]	# add new repository as a shortname
+$ git remote add shortname [url]	# add new repository as shortname
 $ git remote show origin			# informations about a particular remote repos
 
 
@@ -47,7 +47,10 @@ $ git checkout -b branch1	# create a new branch and switch to it (a branch is ju
 $ git checkout master		# go back to the master
 $ git checkout branch1	# go back to branch1
 $ git branch -d branch1	# delete the branch
-$ git push origin <branch>	# to make a brancj available to other 
+$ git push origin branch1	# to make a branch available to others (so that they can make a pull)
+$ git merge <branch>	# merge <branch> to the active branch
+$ git push origin --delete branch1	# delete remote branch1
+
 
 ### Managing files
 $ git add git.md		#  to start tracking a file and stage it to be commited (if already tracked)
