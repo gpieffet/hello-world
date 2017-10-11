@@ -23,18 +23,31 @@ $ git config --global user.name "name here"
 $ git config --global user.email "email address here"
 $ git config --global core.editor "Fav. editor here if different from default"
 
-### Cloning
+
+### Cloning or starting a local repository
 $ git clone https://github.com/gpieffet/hello-world.git git-clone-local-dir
+$ git init			# initialize a git repository
+$ git remote add origin <server@>	# connect to a remote repos 
+
 
 ### Getting information
 $ git status
 $ git diff			# diff berween the the staging area and the working directory
 $ git diff --staged	# diff berween the the staged files and the last commit
 $ git log
+$ git branch			# show existing branches
 $ git remote [-v]		# list which remote servers are configured
 => a cloned repo. appears as "origin"
 $ git remote add shortname [url]	# add new repository as a shortname
-$ git remote show origin			# informations about a particilar remote repos
+$ git remote show origin			# informations about a particular remote repos
+
+
+### Managing branches
+$ git checkout -b branch1	# create a new branch and switch to it (a branch is just a pointer to a commit)
+$ git checkout master		# go back to the master
+$ git checkout branch1	# go back to branch1
+$ git branch -d branch1	# delete the branch
+$ git push origin <branch>	# to make a brancj available to other 
 
 ### Managing files
 $ git add git.md		#  to start tracking a file and stage it to be commited (if already tracked)
@@ -55,4 +68,5 @@ $ git push origin master	# push the changes to the server origin and the branch 
 ### Files that you don't want to appear (in the status) even as untracked
 => Put them in .gitignore
 and more with sublime text, and more and more
+from a new branch
 
